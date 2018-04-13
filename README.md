@@ -14,5 +14,9 @@ disk-image-create centos7 epel selinux-permissive dhcp-all-interfaces vm toram  
 notes:
 
 install-static will destroy symlinks, so if you try to copy to /lib when /lib
-is a symlink to /usr/lib then things will break
+is a symlink to /usr/lib then things will break. It may be better for install-static
+to use:
 
+`-K, --keep-dirlinks         treat symlinked dir on receiver as dir`
+
+as an rsync command line option.
