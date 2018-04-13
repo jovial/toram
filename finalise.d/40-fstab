@@ -1,0 +1,3 @@
+#!/bin/bash
+
+echo "none / tmpfs defaults 0 0" > /etc/fstab
